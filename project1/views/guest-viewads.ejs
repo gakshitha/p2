@@ -1,0 +1,55 @@
+<html>
+    <head>
+      <title>Guest view Ad Page </title>
+        <style>
+        table {
+          border-collapse: collapse;
+          width: 60%;
+          margin-left: 150px;
+         
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 8px;
+          text-align: center;
+        }
+        
+        tr:nth-child(even) {background-color: #f3eaea;}
+        html {
+    height: 100%;
+  }
+  body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #EA5C54 0%, #bb6dec 100%);
+  }
+  
+        </style>
+        </head>
+    <body>
+        <h1 style="text-shadow: 2px 2px white;color:rgba(0,0,0,.5);margin-left: 30px;margin-top: 80px;">Welcome Guest</h1>
+        <br> <table class="table table-hover table-dark" id="myTable"
+             style="text-align: center;margin-top:2%;background-color: aliceblue;">
+                 <tr style="height: 50px;">
+                     <th> Ad Name </th>
+                     <th> Action </th>
+                     <th></th>
+                 </tr>
+             <% if( data.length> 0 )
+                 {
+                   data.forEach(function (data){
+                 %>
+            
+                 <tr style="height: 50px;">
+                     <td><%=data.name%> </td>
+                     <td ><a class="" href="/member/member/guest/<%=data._id%>"> More Info ? </a> </td> 
+                    
+                    
+                 </tr>
+                <% })
+               } %>
+         </table>
+    </body>
+</html>

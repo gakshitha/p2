@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Member Details</title>
+    <link rel="stylesheet" href="adminstyleviewmembersinfo.css">
+</head>
+
+<body>
+  <br>  <div class="login-box">
+        <form>
+            <h1 style="text-shadow: 2px 2px white;color:rgba(0,0,0,.5);margin-left: 30px;margin-top: 80px;">Full details of user<h1>  <%=data.username%></h1></h1>
+           <br> <table class="table table-hover table-dark" id="myTable"
+                style="text-align: center;margin-top:2%;background-color: aliceblue;">
+                    <tr style="height: 50px;">
+                        <th>User Name </th>
+                        <th>Password </th>
+                        <th>Email </th>
+                        <th>Mobile</th>
+                    </tr>
+                <% if( data.length> 0 )
+                    {
+                    data.forEach(function (data){
+                    %>
+                    <tr style="height: 50px;">
+                        <td>
+                            <%=data.username%>
+                        </td>
+                        <td><%=data.password%></td>
+                        <td><%=data.email%></td>
+                        <td><%=data.mobile%></td> 
+                        
+                    </tr>
+
+                    <% }) } %>
+            </table>
+            <% if( data.length> 0 )
+            {
+            data.forEach(function (data){
+            %>
+            <h1 style="text-shadow: 2px 2px white;color:rgba(0,0,0,.5);margin-left: 30px;margin-top: 80px;">Do you want details about advertisement. <a href="admin/viewads/<%=data._id%>" >Click Here</a></h1>
+            <% }) } %>
+        </form>
+    </div>
+</body>
+
+</html>

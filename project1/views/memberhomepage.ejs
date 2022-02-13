@@ -1,0 +1,107 @@
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="memberstylehome.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Member Home page</title>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  .navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+  .dropbtn:hover {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  </style>
+        </head>
+    <body>
+        <div>
+        </div>
+        
+        <div class="login-box">
+         
+            <h1 style="margin-top: 100px;text-shadow: 2px 2px white;color:rgba(0,0,0,.5);"> <b><u>Welcome <%=data.username%>!!</u></b></h1>
+            <div class="navbar" style="margin-left: 878px;margin-top: -60px;">
+              <div class="dropdown">
+                <button class="dropbtn">Profile 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="/member/updateprofile/<%=data._id%>">Update profile</a>
+                  <a href="/member/updatepassword/<%=data._id%>">Update password</a>
+                  <a href="/member/logout">
+                    Logout
+                  </a>
+                  <a href="/member/deleteaccountpost/<%=data._id%>" >
+                    Delete account
+                  </a>  
+                </div>
+              </div> 
+            </div>
+             <br>
+           
+            
+           
+            <form>
+              <a href="createad" style="margin-top: 70px;margin-left: 90px;">
+               Create Ad
+              </a>
+              <a href="/member/viewads/<%=data._id%>">
+               View All Ads
+              </a>  
+              <a class="" href="/member/deleteall/<%=data._id%>" id="a1"> Delete All Ads </a>
+            </form>
+          </div>
+    </body>
+</html>

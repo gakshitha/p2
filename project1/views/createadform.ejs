@@ -1,0 +1,67 @@
+<html>
+    <head> 
+      <title>Ad Create page</title>
+        <link rel="stylesheet" href="stylehome.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">  </head>
+    <body>
+        <form action="/member/createadpost/<%=data._id%>" method="post" enctype="multipart/form-data">
+          <div class='login'>
+            <div class='login_title'>
+              <span><b>Create Ad</b></span>
+            </div>
+            
+            <div class='login_fields'>
+              <div class='login_fields__user'>
+                <div class='icon'>
+                 <i class="fa fa-user" style="color: aliceblue;"></i>
+                </div>
+                <input placeholder='Name' type='text' name="name"> 
+                  <div class='validation'>
+                    <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
+                  </div>
+              </div>
+            
+
+              <div class='login_fields__password'>
+                <div class='icon'>
+                 <i class="fa fa-key" style="color: aliceblue;"></i>
+                </div>
+                <input placeholder='Price' type='number' name="price">
+                <div class='validation'>
+                  <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
+                </div>
+              </div>
+
+
+              <div class='login_fields__email'>
+                <div class='icon'>
+                <i class="fa fa-envelope" style="color: aliceblue;"></i>
+                </div>
+                <input placeholder='Description' type='text' name="description">
+                <div class='validation'>
+                  <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
+                </div>
+              </div>
+              
+<br>
+              <div class='login_fields'>
+                <input placeholder='Image' type='file' name="image" style="color: aliceblue;margin-left: 46px;">
+                <div class='validation'>
+                  <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
+                </div>
+              </div>
+             
+<br><br>
+              <div class='login_fields__submit'>
+                <input type='submit' value='Create Ad'>
+                <div class='forgot'>
+                  <a href='/member/back'  id="a1">Back?</a>
+                </div>
+              </div>
+
+            </div>
+         </div>
+       
+            </form>
+           </body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>View Ads </title>
+<style>
+    html {
+    height: 100%;
+  }
+  body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+  }
+  
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-left: 240px;
+}
+th,
+td {
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+</style>
+        </head>
+    <body>
+        <h1 style="text-shadow: 2px 2px white;color:rgba(0,0,0,.5);margin-left: 160px;margin-top: 150px;">Ads which are created by this user</h1>
+        <br> <table class="table table-hover table-dark" id="myTable"
+             style="text-align: center;margin-top:2%;background-color: aliceblue;">
+                 <tr style="height: 50px;">
+                     <th> Ad Name </th>
+                     <th> Ad Description </th>
+                     <th> Ad Price </th>
+                     <th> Action </th>
+                     <th></th>
+                 </tr>
+             <% if( data.length> 0 )
+                 {
+                   data.forEach(function (data){
+                 %>
+            
+                 <tr style="height: 50px;">
+                     <td><%=data.name%> </td>
+                     <td><%=data.description%> </td>
+                     <td><%=data.price%> </td>
+                     <td ><a class="" href="/admin/admin/contact/<%=data._id%>"> Contact ?</a> </td> 
+                    
+                    
+                 </tr>
+                <% })
+               } %>
+         </table>
+    </body>
+</html>

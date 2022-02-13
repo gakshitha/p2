@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Members List</title>
+    <link rel="stylesheet" href="adminstyleviewmembers.css">
+
+</head>
+
+<body>
+    <div class="login-box">
+        <form>
+            <h1 style="text-shadow: 2px 2px white;color:rgba(0,0,0,.5);">List of all Members</h1>
+            <table class="table table-hover table-dark" id="myTable"
+                style="text-align: center;margin-top:2%;background-color: aliceblue;">
+                    <tr style="height: 50px;">
+                        <th>User Name </th>
+                        <th>Action</th>
+                    </tr>
+                <% if( data.length> 0 )
+                    {
+                    data.forEach(function (data){
+
+                    %>
+
+                    <tr >
+                        <td>
+                            <%=data.username%>
+                        </td>
+                        <td><a class="" href="/admin/<%=data._id%>" id="a1"> View More </a> </td>
+                    </tr>
+
+                    <% }) } %>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
